@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardBody, CardFooter, CardHeader, Container, Divider, Flex, HStack, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import { Avatar, Box, Button, Card, CardBody, CardFooter, CardHeader, Container, Divider, Flex, HStack, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import tasks from "../data/data"
 import { EditIcon, ViewIcon } from "@chakra-ui/icons";
 export default function Dashboard() {
@@ -11,9 +11,7 @@ export default function Dashboard() {
             <Card key={item.id} borderTop="4px" borderColor="purple.400" bg="white">
               <CardHeader>
                   <Flex>
-                    <Box h="50px" w="50px">
-                      <Text>AV</Text>
-                    </Box>
+                    <Avatar src={item.img}/>
                     <Box>
                       <Heading as="h3" size="sm">{item.title}</Heading>
                       <Text>by {item.author}</Text>

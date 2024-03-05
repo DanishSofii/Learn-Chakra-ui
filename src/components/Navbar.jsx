@@ -1,4 +1,5 @@
-import { Flex ,Box, Heading, Text, Button, Spacer, HStack, useToast} from "@chakra-ui/react"
+import { ChatIcon, CheckCircleIcon, CheckIcon } from "@chakra-ui/icons";
+import { Flex ,Box, Heading, Text, Button, Spacer, HStack, useToast, Avatar, AvatarBadge, Icon} from "@chakra-ui/react"
 
 function Navbar() {
     const toast = useToast();
@@ -19,7 +20,12 @@ function Navbar() {
                 <Heading as="h2">Dojo Tasks</Heading>
                 <Spacer/>
                 <HStack spacing="20px">
-                    <Box bg="gray.200" p="10px">M</Box>
+                   <Avatar name="mario" bg="purple" src="/img/mario.png">
+                        <AvatarBadge  >
+                            {/* <Text  fontSize="xs" color="white">3</Text> */}
+                           <Icon bg="white" h="17px" w="17px" color="blue" as={CheckCircleIcon}/>
+                        </AvatarBadge>
+                   </Avatar>
                     <Text>abc@gmail.com</Text>
                     <Button colorScheme="purple" onClick={showToast}>Logout</Button>
                 </HStack>
