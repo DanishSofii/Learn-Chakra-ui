@@ -11,7 +11,7 @@ export default function Dashboard() {
             <Card key={item.id} borderTop="4px" borderColor="purple.400" bg="white">
               <CardHeader>
                   <Flex>
-                    <Avatar src={item.img}/>
+                    <Avatar src={item.img} mr="20px"/>
                     <Box>
                       <Heading as="h3" size="sm">{item.title}</Heading>
                       <Text>by {item.author}</Text>
